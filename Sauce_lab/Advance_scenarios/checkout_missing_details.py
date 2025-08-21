@@ -39,7 +39,7 @@ def Checkout():
     #enter user details
     first_name = wait.until(EC.visibility_of_element_located((By.ID, "first-name"))).send_keys("Muskaan")
     last_name = wait.until(EC.visibility_of_element_located((By.ID, "last-name"))).send_keys("Sahu")
-    Postal_code = wait.until(EC.visibility_of_element_located((By.ID, "postal-code"))).send_keys("1232562")
+    Postal_code = wait.until(EC.visibility_of_element_located((By.ID, "postal-code"))).send_keys("")
     print("Entered user details")
 
     # Click continue button
@@ -47,17 +47,13 @@ def Checkout():
     continue_button.click()
     print("Checkout process continued")
 
-    #verify checkout overview 
-    finish_button = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR,"#checkout_summary_container > div > div.summary_info > div.cart_footer > a.btn_action.cart_button")))
-    finish_button.click()
-    print("Checkout overview completed")
 
     # Capture and print confirmation text
-    confirmation_text = wait.until(
-        EC.visibility_of_element_located((By.CLASS_NAME, "complete-header"))
+    Error_text = wait.until(
+        EC.visibility_of_element_located((By.XPATH, "//*[@id='checkout_info_container']/div/form/h3"))
     ).text
     print("Checkout flow completed successfully")
-    print("Confirmation message:", confirmation_text)
+    print("Confirmation message:", Error_text)
 
 
 
