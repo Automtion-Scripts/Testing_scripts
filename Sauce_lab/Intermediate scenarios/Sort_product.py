@@ -19,17 +19,17 @@ def login(username, password):
     wait.until(EC.presence_of_element_located((By.CLASS_NAME, "product_label")))
     print("Login successful")
 
-def sort_products():
-    """sort products by price(A to Z)"""
-    wait.until(EC.element_to_be_clickable((By.CLASS_NAME,"product_sort_container"))).click()
-    wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='inventory_filter_container']/select/option[1]"))).click()
-    print("Products sorted by price (A to Z)")
+# def sort_products():
+#     """sort products by price(A to Z)"""
+#     wait.until(EC.element_to_be_clickable((By.CLASS_NAME,"product_sort_container"))).click()
+#     wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='inventory_filter_container']/select/option[1]"))).click()
+#     print("Products sorted by price (A to Z)")
 
-def sort_products():
-    """sort products by price(Z to A)"""
-    wait.until(EC.element_to_be_clickable((By.CLASS_NAME,"product_sort_container"))).click()
-    wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='inventory_filter_container']/select/option[2]"))).click()
-    print("Products sorted by price (Z to A)")
+# def sort_products():
+#     """sort products by price(Z to A)"""
+#     wait.until(EC.element_to_be_clickable((By.CLASS_NAME,"product_sort_container"))).click()
+#     wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='inventory_filter_container']/select/option[2]"))).click()
+#     print("Products sorted by price (Z to A)")
 
 def sort_products():
     """sort products by price(low to high)"""
@@ -37,11 +37,11 @@ def sort_products():
     wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='inventory_filter_container']/select/option[3]"))).click()
     print("Products sorted by price (low to high)")
 
-def sort_products():
-    """sort products by price(high to low)"""
-    wait.until(EC.element_to_be_clickable((By.CLASS_NAME,"product_sort_container"))).click()
-    wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='inventory_filter_container']/select/option[4]"))).click()
-    print("Products sorted by price (high to low)")
+# def sort_products():
+#     """sort products by price(high to low)"""
+#     wait.until(EC.element_to_be_clickable((By.CLASS_NAME,"product_sort_container"))).click()
+#     wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='inventory_filter_container']/select/option[4]"))).click()
+#     print("Products sorted by price (high to low)")
 
 try:
     login ('standard_user','secret_sauce')
