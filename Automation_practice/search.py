@@ -21,6 +21,9 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+def ChromeDriverManager():
+    raise NotImplementedError
+
 # Optional: uncomment to use webdriver_manager (auto-download chromedriver)
 # from webdriver_manager.chrome import ChromeDriverManager
 
@@ -94,5 +97,5 @@ def search_wikipedia(search_query, driver=None, timeout=10):
 
 if __name__ == "__main__":
     # Example usage
-    SEARCH_QUERY = "Selenium (software)"
+    SEARCH_QUERY = "Test selenium"
     search_wikipedia(SEARCH_QUERY)
